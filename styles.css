@@ -1,0 +1,239 @@
+html {
+  font-size: 16px;
+  background-color: #333333;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --mainColor-1: #393e41;
+  --mainColor-2: #e7e5df;
+
+  --mainButtonColor-1: #44bba4;
+
+  --textColor-2: #fff;
+  --textColor-1: #e7e5df;
+  --textColor-3: #393e41;
+  --textColor-4: #e7bb41;
+}
+
+body {
+  margin: 1.5rem;
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--mainColor-2);
+}
+
+nav > ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+nav > ul > li {
+  list-style: none;
+  padding: 1rem 1.5rem;
+}
+
+nav > ul > li > a {
+  text-decoration: none;
+  color: var(--mainColor-1);
+  font-family: Audiowide;
+}
+
+#home {
+  position: relative;
+  height: 95vh;
+}
+
+.home-bg {
+  background: black;
+  clip-path: polygon(
+    20% 5%,
+    80% 5%,
+    100% 20%,
+    100% 80%,
+    80% 95%,
+    20% 95%,
+    0% 80%,
+    0% 20%
+  );
+}
+
+#welcome-section {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.heading {
+  font-family: "Trirong", serif;
+  backface-visibility: hidden;
+}
+
+.heading-main {
+  display: block;
+  color: var(--textColor-1);
+  font-size: 3rem;
+  letter-spacing: 0.3rem;
+  /* animation in main heading */
+  animation-name: moveInLeft;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+}
+
+.heading-sub {
+  display: block;
+  color: var(--textColor-4);
+  font-size: 2rem;
+  letter-spacing: 0.92rem;
+  /* animation in sub heading*/
+  animation-name: moveInRight;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+}
+
+.btn:link {
+  animation-name: moveInUp;
+  animation-duration: 4s;
+  animation-timing-function: ease-in-out;
+}
+
+/*
+  .btn:link,
+  .btn:visited {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: capitalize;
+    border-radius: 100px;
+    background-color: var(--mainButtonColor-1);
+    color: var(--textColor-3);
+    font-weight: bold;
+    margin: 5rem;
+  }
+  */
+
+.btn-txt {
+  text-decoration: none;
+  text-transform: capitalize;
+  font-weight: bold;
+  color: var(--textColor-3);
+}
+
+.btn {
+  --glow-color: rgb(135, 232, 255);
+  --glow-spread-color: rgba(64, 224, 208, 0.781);
+  --enhanced-glow-color: rgb(231, 206, 255);
+  --btn-color: rgb(0, 183, 235);
+
+  display: inline-block;
+  border: 0.25em solid var(--glow-color);
+  padding: 20px 40px;
+  color: var(--glow-color);
+  background-color: var(--btn-color);
+  border-radius: 1em;
+  outline: none;
+  box-shadow: 0 0 1em 0.25em var(--glow-color),
+    0 0 4em 1em var(--glow-spread-color),
+    inset 0 0 0.75em 0.25em var(--glow-color);
+  text-shadow: 0 0 0.5em var(--glow-color);
+  position: relative;
+  transition: all 0.3s;
+  margin: 5rem;
+}
+
+.btn::after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 120%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--glow-spread-color);
+  filter: blur(2em);
+  opacity: 0.7;
+  transform: perspective(1.5em) rotateX(35deg) scale(1, 0.6);
+}
+
+.btn:hover {
+  color: var(--btn-color);
+  background-color: var(--glow-color);
+  box-shadow: 0 0 1em 0.25em var(--glow-color),
+    0 0 4em 2em var(--glow-spread-color),
+    inset 0 0 0.75em 0.25em var(--glow-color);
+}
+
+.btn:active {
+  box-shadow: 0 0 0.6em 0.25em var(--glow-color),
+    0 0 2.5em 2em var(--glow-spread-color),
+    inset 0 0 0.5em 0.25em var(--glow-color);
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  80% {
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  40% {
+    opacity: 0;
+  }
+  80% {
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .menu-container {
+    padding: 0 0.5rem 0 2rem;
+  }
+  nav > ul > li > a {
+    font-size: 1.1rem;
+  }
+  .btn {
+    padding: 15px 40px;
+    font-size: 1.5rem;
+  }
+}
