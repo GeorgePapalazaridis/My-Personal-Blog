@@ -1,6 +1,5 @@
 html {
   font-size: 16px;
-  background-color: #333333;
 }
 
 * {
@@ -13,16 +12,25 @@ html {
   --mainColor-1: #393e41;
   --mainColor-2: #e7e5df;
 
-  --mainButtonColor-1: #44bba4;
-
+  /* Colors for the text */
   --textColor-2: #fff;
   --textColor-1: #e7e5df;
   --textColor-3: #393e41;
   --textColor-4: #e7bb41;
+
+  /* Colors for button */
+  --mainButtonColor-1: #44bba4;
+  --btn-color: rgb(0, 183, 235);
+
+  --glow-color: rgb(135, 232, 255);
+  --glow-spread-color: rgba(64, 224, 208, 0.781);
+  --enhanced-glow-color: rgb(231, 206, 255);
 }
 
 body {
-  margin: 1.5rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
 }
 
 .menu-container {
@@ -51,27 +59,14 @@ nav > ul > li > a {
 }
 
 #home {
+  background: black;
   position: relative;
   height: 95vh;
 }
 
-.home-bg {
-  background: black;
-  clip-path: polygon(
-    20% 5%,
-    80% 5%,
-    100% 20%,
-    100% 80%,
-    80% 95%,
-    20% 95%,
-    0% 80%,
-    0% 20%
-  );
-}
-
 #welcome-section {
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -128,18 +123,14 @@ nav > ul > li > a {
   text-transform: capitalize;
   font-weight: bold;
   color: var(--textColor-3);
+  font-size: 1.3rem;
 }
 
-.btn {
-  --glow-color: rgb(135, 232, 255);
-  --glow-spread-color: rgba(64, 224, 208, 0.781);
-  --enhanced-glow-color: rgb(231, 206, 255);
-  --btn-color: rgb(0, 183, 235);
-
+.btn:link,
+.btn:visited {
   display: inline-block;
   border: 0.25em solid var(--glow-color);
   padding: 20px 40px;
-  color: var(--glow-color);
   background-color: var(--btn-color);
   border-radius: 1em;
   outline: none;
@@ -149,7 +140,7 @@ nav > ul > li > a {
   text-shadow: 0 0 0.5em var(--glow-color);
   position: relative;
   transition: all 0.3s;
-  margin: 5rem;
+  margin-top: 15rem;
 }
 
 .btn::after {
@@ -167,7 +158,6 @@ nav > ul > li > a {
 }
 
 .btn:hover {
-  color: var(--btn-color);
   background-color: var(--glow-color);
   box-shadow: 0 0 1em 0.25em var(--glow-color),
     0 0 4em 2em var(--glow-spread-color),
@@ -175,10 +165,18 @@ nav > ul > li > a {
 }
 
 .btn:active {
+  color: var(--btn-color);
   box-shadow: 0 0 0.6em 0.25em var(--glow-color),
-    0 0 2.5em 2em var(--glow-spread-color),
+    0 0 2.5em 1.2em var(--glow-spread-color),
     inset 0 0 0.5em 0.25em var(--glow-color);
+  font-size: 1.2rem;
+  transition: font-size 0.3s ease-in-out;
 }
+
+/* #about-me {
+  height: 95vh;
+  background-image: ;
+} */
 
 @keyframes moveInLeft {
   0% {
