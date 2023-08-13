@@ -34,11 +34,20 @@ body {
 }
 
 .menu-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   background-color: var(--mainColor-2);
+  padding: 5px 35px 5px 35px;
+}
+
+.logo {
+  height: 80px;
 }
 
 nav > ul {
@@ -54,14 +63,16 @@ nav > ul > li {
 
 nav > ul > li > a {
   text-decoration: none;
-  color: var(--mainColor-1);
+  color: black;
   font-family: Audiowide;
+  font-size: 1.1rem;
+  letter-spacing: 0.2rem;
 }
 
 #home {
   background: black;
   position: relative;
-  height: 95vh;
+  height: 100vh;
 }
 
 #welcome-section {
