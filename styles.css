@@ -44,6 +44,7 @@ body {
   justify-content: space-between;
   background-color: var(--mainColor-2);
   padding: 5px 35px 5px 35px;
+  box-shadow: 0 4px 0 rgba(64, 224, 208, 0.871);
 }
 
 .logo {
@@ -184,10 +185,18 @@ nav > ul > li > a {
   transition: font-size 0.3s ease-in-out;
 }
 
-/* #about-me {
-  height: 95vh;
-  background-image: ;
-} */
+#my-cv {
+  height: 100vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(135, 232, 255, 0.8),
+      var(--glow-spread-color)
+    ),
+    url(img/backGround-PC-1.png);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 20%, 100% 92%, 8% 100%);
+}
 
 @keyframes moveInLeft {
   0% {
