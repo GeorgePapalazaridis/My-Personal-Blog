@@ -28,7 +28,7 @@ html {
 }
 
 body {
-  font-family: "Lato", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 1rem;
 }
@@ -44,7 +44,7 @@ body {
   justify-content: space-between;
   background-color: var(--mainColor-2);
   padding: 5px 35px 5px 35px;
-  box-shadow: 0 4px 0 rgba(64, 224, 208, 0.871);
+  box-shadow: 0 4px 0 rgba(231, 187, 65, 0.871);
 }
 
 .logo {
@@ -76,13 +76,15 @@ nav > ul > li > a {
   height: 100vh;
 }
 
-#welcome-section {
+.section-wrapper {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  z-index: 1;
 }
+
 .heading {
   font-family: "Trirong", serif;
   backface-visibility: hidden;
@@ -92,7 +94,7 @@ nav > ul > li > a {
   display: block;
   color: var(--textColor-1);
   font-size: 3rem;
-  letter-spacing: 0.3rem;
+  letter-spacing: 0.35rem;
   /* animation in main heading */
   animation-name: moveInLeft;
   animation-duration: 1.5s;
@@ -115,20 +117,6 @@ nav > ul > li > a {
   animation-duration: 4s;
   animation-timing-function: ease-in-out;
 }
-
-/*
-  .btn:link,
-  .btn:visited {
-    display: inline-block;
-    text-decoration: none;
-    text-transform: capitalize;
-    border-radius: 100px;
-    background-color: var(--mainButtonColor-1);
-    color: var(--textColor-3);
-    font-weight: bold;
-    margin: 5rem;
-  }
-  */
 
 .btn-txt {
   text-decoration: none;
@@ -182,21 +170,44 @@ nav > ul > li > a {
     0 0 2.5em 1.2em var(--glow-spread-color),
     inset 0 0 0.5em 0.25em var(--glow-color);
   font-size: 1.2rem;
-  transition: font-size 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
-#my-cv {
-  height: 100vh;
+.cv-section {
+  height: 83vh;
+  position: relative;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(72, 85, 99, 0.8),
+      rgba(41, 50, 60, 0.8)
+      /* rgba(171, 186, 171, 0.8),
+      rgba(255, 255, 255, 0.8) */
+    ),
+    url(img/backGround-PC-1.png);
+  background-size: cover;
+  /* background-position: top; */
+  clip-path: polygon(0 0, 100% 20%, 100% 92%, 8% 100%);
+}
+
+.contact-section {
+  height: 92vh;
+  position: relative;
   background-image: linear-gradient(
       to right bottom,
       rgba(135, 232, 255, 0.8),
       var(--glow-spread-color)
     ),
-    url(img/backGround-PC-1.png);
+    url(img/backGround-PC-2.png);
   background-size: cover;
   background-position: top;
-  clip-path: polygon(0 0, 100% 20%, 100% 92%, 8% 100%);
+  /* clip-path: polygon(0 0, 100% 20%, 100% 92%, 8% 100%); */
 }
+
+.heading-section {
+  text-align:center;
+}
+
+
 
 @keyframes moveInLeft {
   0% {
@@ -243,15 +254,70 @@ nav > ul > li > a {
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (min-width: 1025px) and (max-width: 1366px) {
   .menu-container {
-    padding: 0 0.5rem 0 2rem;
+    padding: 4px 25px 4px 25px;
+  }
+  nav > ul > li {
+    padding: 0.7rem 1.05rem;
   }
   nav > ul > li > a {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
+  }
+  .logo {
+    height: 60px;
+  }
+  .section-wrapper {
+    top: 55%;
+  }
+  .heading-main {
+    font-size: 2.5rem;
+    letter-spacing: 0.30rem;
+  }
+  .heading-sub {
+    font-size: 1.5rem;
+    letter-spacing: 0.87rem;
   }
   .btn {
-    padding: 15px 40px;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
+  .btn:link,
+  .btn:visited {
+  margin-top: 8rem;
+  padding: 16px 32px;
+}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .menu-container {
+    padding: 4px 25px 4px 25px;
+  }
+  nav > ul > li {
+    padding: 0.2rem 0.4rem;
+  }
+  nav > ul > li > a {
+    font-size: 0.6rem;
+  }
+  .logo {
+    height: 50px;
+  }
+  .section-wrapper {
+    top: 55%;
+  }
+  .heading-main {
+    font-size: 1.8rem;
+    letter-spacing: 0.24rem;
+  }
+  .heading-sub {
+    font-size: 0.9rem;
+    letter-spacing: 0.75rem;
+  }
+  .btn {
+    font-size: 0.9rem;
+  }
+  .btn:link,
+  .btn:visited {
+  margin-top: 6rem;
+  padding: 12px 24px;
+}
 }
