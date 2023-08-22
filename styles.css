@@ -180,7 +180,7 @@ nav > ul > li > a {
       to right bottom,
       rgba(72, 85, 99, 0.8),
       rgba(41, 50, 60, 0.8)
-      /* rgba(171, 186, 171, 0.8),
+        /* rgba(171, 186, 171, 0.8),
       rgba(255, 255, 255, 0.8) */
     ),
     url(img/backGround-PC-1.png);
@@ -204,10 +204,60 @@ nav > ul > li > a {
 }
 
 .heading-section {
-  text-align:center;
+  text-align: center;
 }
 
+.projects-section {
+  text-align: center;
+  padding: 10rem 2rem;
+  background-color: var(--mainColor-2);
+}
 
+.projects-section-header {
+  max-width: 640px;
+  margin: 0 auto 6rem auto;
+  border-bottom: 0.2rem solid var(--mainColor-1);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 4rem;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto 6rem auto;
+}
+
+.project {
+  background: var(--mainColor-1);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--mainColor-2);
+}
+
+.project-image {
+  height: calc(100% - 6.8rem);
+  width: 100%;
+  object-fit: cover;
+}
+
+.project-title {
+  font-size: 2rem;
+  padding: 2rem 0.5rem;
+}
+
+.code {
+  color: var(--mainColor-1);
+  transition: color 0.3s ease-out;
+}
+
+.project:hover .code {
+  color: var(--btn-color);
+}
 
 @keyframes moveInLeft {
   0% {
@@ -272,7 +322,7 @@ nav > ul > li > a {
   }
   .heading-main {
     font-size: 2.5rem;
-    letter-spacing: 0.30rem;
+    letter-spacing: 0.3rem;
   }
   .heading-sub {
     font-size: 1.5rem;
@@ -283,9 +333,9 @@ nav > ul > li > a {
   }
   .btn:link,
   .btn:visited {
-  margin-top: 8rem;
-  padding: 16px 32px;
-}
+    margin-top: 8rem;
+    padding: 16px 32px;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
@@ -317,7 +367,7 @@ nav > ul > li > a {
   }
   .btn:link,
   .btn:visited {
-  margin-top: 6rem;
-  padding: 12px 24px;
-}
+    margin-top: 6rem;
+    padding: 12px 24px;
+  }
 }
