@@ -21,10 +21,15 @@ html {
   /* Colors for button */
   --mainButtonColor-1: #44bba4;
   --btn-color: rgb(0, 183, 235);
+  --btn-color-2: rgb(248, 244, 227);
 
   --glow-color: rgb(135, 232, 255);
   --glow-spread-color: rgba(64, 224, 208, 0.781);
   --enhanced-glow-color: rgb(231, 206, 255);
+
+  --glow-color-2: rgb(248, 244, 227);
+  --glow-spread-color-2: rgba(248, 244, 227, 0.781);
+
 }
 
 body {
@@ -173,8 +178,53 @@ nav > ul > li > a {
   transition: all 0.3s ease-in-out;
 }
 
+.btn-2:link,
+.btn-2:visited {
+  display: inline-block;
+  border: 0.25em solid var(--glow-color-2);
+  padding: 20px 40px;
+  background-color: var(--btn-color-2);
+  border-radius: 1em;
+  outline: none;
+  box-shadow: 0 0 1em 0.25em var(--glow-color-2),
+    0 0 4em 1em var(--glow-spread-color-2),
+    inset 0 0 0.75em 0.25em var(--glow-color-2);
+  text-shadow: 0 0 0.5em var(--glow-color-2);
+  position: relative;
+  transition: all 0.3s;
+  margin-top: 15rem;
+}
+
+.btn-2:hover {
+  background-color: var(--glow-color-2);
+  box-shadow: 0 0 1em 0.25em var(--glow-color-2),
+    0 0 4em 2em var(--glow-spread-color-2),
+    inset 0 0 0.75em 0.25em var(--glow-color-2);
+}
+
+.btn-2:active {
+  color: var(--textColor-4);
+  box-shadow: 0 0 0.6em 0.25em var(--glow-color-2),
+    0 0 2.5em 1.2em var(--glow-spread-color-2),
+    inset 0 0 0.5em 0.25em var(--glow-color-2);
+  font-size: 1.2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.cv-section-wrapper {
+  padding: 5rem 0.5rem;
+  text-align: center;
+}
+
+.cv-section-header {
+  margin: 0 auto 1rem auto;
+  border-bottom: 0.2rem solid black;
+  max-width: 100px;
+  font-family: "Raleway", sans-serif;
+}
+
 .cv-section {
-  height: 83vh;
+  height: 80vh;
   position: relative;
   background-image: linear-gradient(
       to right bottom,
@@ -202,6 +252,7 @@ nav > ul > li > a {
   background-position: top;
   /* clip-path: polygon(0 0, 100% 20%, 100% 92%, 8% 100%); */
 }
+
 
 .heading-section {
   text-align: center;
@@ -328,14 +379,19 @@ a {
     font-size: 1.5rem;
     letter-spacing: 0.87rem;
   }
-  .btn {
+  .btn, .btn-2 {
     font-size: 1.2rem;
   }
   .btn:link,
-  .btn:visited {
-    margin-top: 8rem;
-    padding: 16px 32px;
-  }
+ .btn:visited,
+  .btn-2:link,
+  .btn-2:visited {
+  margin-top: 7rem;
+  padding: 10px 20px;
+}
+.btn:active, .btn-2:active {
+  font-size: 1rem;
+}
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
@@ -362,12 +418,17 @@ a {
     font-size: 0.9rem;
     letter-spacing: 0.75rem;
   }
-  .btn {
+  .btn, .btn-2 {
     font-size: 0.9rem;
   }
   .btn:link,
-  .btn:visited {
-    margin-top: 6rem;
-    padding: 12px 24px;
-  }
+  .btn:visited,
+  .btn-2:link,
+  .btn-2:visited {
+  margin-top: 6rem;
+  padding: 12px 24px;
+}
+.btn:active, .btn-2:active {
+  font-size: 0.8rem;
+}
 }
