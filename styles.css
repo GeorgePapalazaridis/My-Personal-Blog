@@ -29,7 +29,6 @@ html {
 
   --glow-color-2: rgb(248, 244, 227);
   --glow-spread-color-2: rgba(248, 244, 227, 0.781);
-
 }
 
 body {
@@ -214,13 +213,15 @@ nav > ul > li > a {
 .cv-section-wrapper {
   padding: 5rem 0.5rem;
   text-align: center;
+  background-color: var(--mainColor-1);
 }
 
 .cv-section-header {
   margin: 0 auto 1rem auto;
-  border-bottom: 0.2rem solid black;
+  border-bottom: 0.2rem solid var(--textColor-1);
   max-width: 100px;
   font-family: "Raleway", sans-serif;
+  color: var(--textColor-1);
 }
 
 .cv-section {
@@ -253,7 +254,6 @@ nav > ul > li > a {
   /* clip-path: polygon(0 0, 100% 20%, 100% 92%, 8% 100%); */
 }
 
-
 .heading-section {
   text-align: center;
 }
@@ -265,6 +265,8 @@ nav > ul > li > a {
 }
 
 .projects-section-header {
+  position: sticky; /* Add this line to make it sticky */
+  top: 100px; /* Adjust this value as needed */
   max-width: 640px;
   margin: 0 auto 6rem auto;
   border-bottom: 0.2rem solid var(--mainColor-1);
@@ -308,6 +310,29 @@ a {
 
 .project:hover .code {
   color: var(--btn-color);
+}
+
+.btn-show-all {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 2rem;
+  background: var(--mainColor-1);
+}
+
+.btn-show-all:hover {
+  background: var(--mainButtonColor-1);
+  transition: all 0.3s ease-out;
+}
+
+.btn-show-all > i {
+  margin-left: 10px;
+  transform: translateX(0);
+  transition: transform 0.3s ease-out;
+}
+
+.fas {
+  font-weight: 900;
 }
 
 @keyframes moveInLeft {
@@ -379,19 +404,21 @@ a {
     font-size: 1.5rem;
     letter-spacing: 0.87rem;
   }
-  .btn, .btn-2 {
+  .btn,
+  .btn-2 {
     font-size: 1.2rem;
   }
   .btn:link,
- .btn:visited,
+  .btn:visited,
   .btn-2:link,
   .btn-2:visited {
-  margin-top: 7rem;
-  padding: 10px 20px;
-}
-.btn:active, .btn-2:active {
-  font-size: 1rem;
-}
+    margin-top: 7rem;
+    padding: 10px 20px;
+  }
+  .btn:active,
+  .btn-2:active {
+    font-size: 1rem;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
@@ -418,17 +445,19 @@ a {
     font-size: 0.9rem;
     letter-spacing: 0.75rem;
   }
-  .btn, .btn-2 {
+  .btn,
+  .btn-2 {
     font-size: 0.9rem;
   }
   .btn:link,
   .btn:visited,
   .btn-2:link,
   .btn-2:visited {
-  margin-top: 6rem;
-  padding: 12px 24px;
-}
-.btn:active, .btn-2:active {
-  font-size: 0.8rem;
-}
+    margin-top: 6rem;
+    padding: 12px 24px;
+  }
+  .btn:active,
+  .btn-2:active {
+    font-size: 0.8rem;
+  }
 }
