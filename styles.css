@@ -35,12 +35,18 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 1rem;
+  margin: 0 auto;
+  max-width: 1500px;
+  background-color: var(--mainColor-1);
 }
 
 .menu-container {
   position: fixed;
   top: 0;
   width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 2rem;
   z-index: 100;
   display: flex;
   flex-direction: row;
@@ -49,6 +55,10 @@ body {
   background-color: var(--mainColor-2);
   padding: 5px 35px 5px 35px;
   box-shadow: 0 4px 0 rgba(231, 187, 65, 0.871);
+}
+
+.menu-img {
+  padding: 0 2rem;
 }
 
 .logo {
@@ -63,7 +73,7 @@ nav > ul {
 
 nav > ul > li {
   list-style: none;
-  padding: 1rem 1.5rem;
+  padding: 1rem 2.5rem;
 }
 
 nav > ul > li > a {
@@ -267,9 +277,18 @@ nav > ul > li > a {
 .projects-section-header {
   position: sticky; /* Add this line to make it sticky */
   top: 100px; /* Adjust this value as needed */
-  max-width: 640px;
-  margin: 0 auto 6rem auto;
+  max-width: 390px;
+  margin: 0 auto 5rem auto;
   border-bottom: 0.2rem solid var(--mainColor-1);
+  background-color: rgba(231, 229, 223, 0.8);
+}
+
+.projects-section-title {
+  position: sticky; /* Add this line to make it sticky */
+  top: 138px; /* Adjust this value as needed */
+  max-width: 390px;
+  margin: 0 auto 2.5rem auto;
+  background-color: rgba(231, 229, 223, 0.7);
 }
 
 .projects-grid {
@@ -299,7 +318,7 @@ a {
 }
 
 .project-title {
-  font-size: 2rem;
+  font-size: 1.7rem;
   padding: 2rem 0.5rem;
 }
 
@@ -333,6 +352,26 @@ a {
 
 .fas {
   font-weight: 900;
+}
+
+footer {
+  position: relative;
+  height: 150px;
+  text-align: center;
+  background-color: #000;
+}
+
+footer > p {
+  color: var(--mainColor-2);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+footer > p > a:hover {
+  color: var(--mainButtonColor-1);
+  transition: all 0.3s ease-out;
 }
 
 @keyframes moveInLeft {
