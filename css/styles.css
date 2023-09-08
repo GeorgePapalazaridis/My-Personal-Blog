@@ -20,11 +20,11 @@ html {
 
   /* Colors for button */
   --mainButtonColor-1: #44bba4;
-  --btn-color: rgb(0, 183, 235);
+  --btn-color: rgb(0, 84, 118);
   --btn-color-2: rgb(248, 244, 227);
 
-  --glow-color: rgb(135, 232, 255);
-  --glow-spread-color: rgba(64, 224, 208, 0.781);
+  --glow-color: rgb(101, 171, 189);
+  --glow-spread-color: rgba(31, 150, 138, 0.781);
   --enhanced-glow-color: rgb(231, 206, 255);
 
   --glow-color-2: rgb(248, 244, 227);
@@ -126,100 +126,6 @@ nav > ul > li > a {
   animation-timing-function: ease-in-out;
 }
 
-.btn:link {
-  animation-name: moveInUp;
-  animation-duration: 4s;
-  animation-timing-function: ease-in-out;
-}
-
-.btn-txt {
-  text-decoration: none;
-  text-transform: capitalize;
-  font-weight: bold;
-  color: var(--textColor-3);
-  font-size: 1.3rem;
-}
-
-.btn:link,
-.btn:visited {
-  display: inline-block;
-  border: 0.25em solid var(--glow-color);
-  padding: 20px 40px;
-  background-color: var(--btn-color);
-  border-radius: 1em;
-  outline: none;
-  box-shadow: 0 0 1em 0.25em var(--glow-color),
-    0 0 4em 1em var(--glow-spread-color),
-    inset 0 0 0.75em 0.25em var(--glow-color);
-  text-shadow: 0 0 0.5em var(--glow-color);
-  position: relative;
-  transition: all 0.3s;
-  margin-top: 15rem;
-}
-
-.btn::after {
-  pointer-events: none;
-  content: "";
-  position: absolute;
-  top: 120%;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: var(--glow-spread-color);
-  filter: blur(2em);
-  opacity: 0.7;
-  transform: perspective(1.5em) rotateX(35deg) scale(1, 0.6);
-}
-
-.btn:hover {
-  background-color: var(--glow-color);
-  box-shadow: 0 0 1em 0.25em var(--glow-color),
-    0 0 4em 2em var(--glow-spread-color),
-    inset 0 0 0.75em 0.25em var(--glow-color);
-}
-
-.btn:active {
-  color: var(--btn-color);
-  box-shadow: 0 0 0.6em 0.25em var(--glow-color),
-    0 0 2.5em 1.2em var(--glow-spread-color),
-    inset 0 0 0.5em 0.25em var(--glow-color);
-  font-size: 1.2rem;
-  transition: all 0.3s ease-in-out;
-}
-
-.btn-2:link,
-.btn-2:visited {
-  display: inline-block;
-  border: 0.25em solid var(--glow-color-2);
-  padding: 20px 40px;
-  background-color: var(--btn-color-2);
-  border-radius: 1em;
-  outline: none;
-  box-shadow: 0 0 1em 0.25em var(--glow-color-2),
-    0 0 4em 1em var(--glow-spread-color-2),
-    inset 0 0 0.75em 0.25em var(--glow-color-2);
-  text-shadow: 0 0 0.5em var(--glow-color-2);
-  position: relative;
-  transition: all 0.3s;
-  margin-top: 15rem;
-}
-
-.btn-2:hover {
-  background-color: var(--glow-color-2);
-  box-shadow: 0 0 1em 0.25em var(--glow-color-2),
-    0 0 4em 2em var(--glow-spread-color-2),
-    inset 0 0 0.75em 0.25em var(--glow-color-2);
-}
-
-.btn-2:active {
-  color: var(--textColor-4);
-  box-shadow: 0 0 0.6em 0.25em var(--glow-color-2),
-    0 0 2.5em 1.2em var(--glow-spread-color-2),
-    inset 0 0 0.5em 0.25em var(--glow-color-2);
-  font-size: 1.2rem;
-  transition: all 0.3s ease-in-out;
-}
-
 .cv-section-wrapper {
   padding: 5rem 0.5rem;
   text-align: center;
@@ -244,7 +150,7 @@ nav > ul > li > a {
         /* rgba(171, 186, 171, 0.8),
       rgba(255, 255, 255, 0.8) */
     ),
-    url(img/backGround-PC-1.png);
+    url(../img/backGround-PC-1.png);
   background-size: cover;
   /* background-position: top; */
   clip-path: polygon(0 0, 100% 20%, 100% 92%, 8% 100%);
@@ -258,7 +164,7 @@ nav > ul > li > a {
       rgba(135, 232, 255, 0.8),
       var(--glow-spread-color)
     ),
-    url(img/backGround-PC-2.png);
+    url(../img/backGround-PC-2.png);
   background-size: cover;
   background-position: top;
   /* clip-path: polygon(0 0, 100% 20%, 100% 92%, 8% 100%); */
@@ -281,6 +187,7 @@ nav > ul > li > a {
   margin: 0 auto 5rem auto;
   border-bottom: 0.2rem solid var(--mainColor-1);
   background-color: rgba(231, 229, 223, 0.8);
+  border-radius: 12px 12px 0 0;
 }
 
 .projects-section-title {
@@ -289,6 +196,7 @@ nav > ul > li > a {
   max-width: 390px;
   margin: 0 auto 2.5rem auto;
   background-color: rgba(231, 229, 223, 0.7);
+  border-radius: 0 0 12px 12px;
 }
 
 .projects-grid {
@@ -331,24 +239,7 @@ a {
   color: var(--btn-color);
 }
 
-.btn-show-all {
-  display: inline-block;
-  padding: 1rem 2rem;
-  border-radius: 8px;
-  font-size: 2rem;
-  background: var(--mainColor-1);
-}
 
-.btn-show-all:hover {
-  background: var(--mainButtonColor-1);
-  transition: all 0.3s ease-out;
-}
-
-.btn-show-all > i {
-  margin-left: 10px;
-  transform: translateX(0);
-  transition: transform 0.3s ease-out;
-}
 
 .fas {
   font-weight: 900;
@@ -373,6 +264,123 @@ footer > p > a:hover {
   color: var(--mainButtonColor-1);
   transition: all 0.3s ease-out;
 }
+
+/* BUTTONS */
+
+.btn-animated {
+  animation: moveInUp 3.5s ease-in-out .75s;
+  animation-fill-mode: backwards;
+}
+
+.btn-txt {
+  text-decoration: none;
+  text-transform: capitalize;
+  font-weight: 500;
+  color: var(--textColor-1);
+  font-size: 1.3rem;
+}
+
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  padding: 20px 40px;
+  border-radius: 1em;
+  outline: none;
+  position: relative;
+  margin-top: 15rem;
+  transition: all 0.3s;
+}
+
+.btn:active {
+  font-size: 1.2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Button of home-page call-to-action */
+.btn-my-project:link,
+.btn-my-project:visited {
+  border: 0.25em solid var(--glow-color);
+  background-color: var(--btn-color);
+  box-shadow: 0 0 1em 0.25em var(--glow-color),
+  0 0 4em 1em var(--glow-spread-color),
+  inset 0 0 0.75em 0.25em var(--glow-color);
+text-shadow: 0 0 0.5em var(--glow-color);
+}
+
+.btn-my-project:hover {
+  background-color: var(--glow-color);
+  box-shadow: 0 0 1em 0.25em var(--glow-color),
+    0 0 4em 2em var(--glow-spread-color),
+    inset 0 0 0.75em 0.25em var(--glow-color);
+}
+
+.btn-my-project:active {
+  color: var(--btn-color);
+  box-shadow: 0 0 0.6em 0.25em var(--glow-color),
+    0 0 2.5em 1.2em var(--glow-spread-color),
+    inset 0 0 0.5em 0.25em var(--glow-color);
+}
+
+.btn-my-project::after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 120%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--glow-spread-color);
+  filter: blur(2em);
+  opacity: 0.7;
+  transform: perspective(1.5em) rotateX(35deg) scale(1, 0.6);
+}
+
+/* Button to download my CV */
+.btn-my-cv:link,
+.btn-my-cv:visited {
+  border: 0.25em solid var(--glow-color-2);
+  /* background-color: var(--btn-color-2); */
+  box-shadow: 0 0 1em 0.25em var(--glow-color-2),
+    0 0 4em 1em var(--glow-spread-color-2),
+    inset 0 0 0.75em 0.25em var(--glow-color-2);
+  text-shadow: 0 0 0.5em var(--glow-color-2);
+}
+
+.btn-my-cv:hover {
+  color: rgba(201, 196, 176, 0.5);
+  box-shadow: 0 0 1em 0.25em var(--glow-color-2),
+    0 0 4em 2em var(--glow-spread-color-2),
+    inset 0 0 0.75em 0.25em var(--glow-color-2);
+}
+
+.btn-my-cv:active {
+  color: var( --glow-spread-color-2);
+  box-shadow: 0 0 0.6em 0.25em var(--glow-color-2),
+    0 0 2.5em 1.2em var(--glow-spread-color-2),
+    inset 0 0 0.5em 0.25em var(--glow-color-2);
+}
+
+/* Button to see all the projects */
+.btn-show-all {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 2rem;
+  background: var(--mainColor-1);
+}
+
+.btn-show-all:hover {
+  background: var(--mainButtonColor-1);
+  transition: all 0.3s ease-out;
+}
+
+.btn-show-all > i {
+  margin-left: 10px;
+  transform: translateX(0);
+  transition: transform 0.3s ease-out;
+}
+
+
 
 @keyframes moveInLeft {
   0% {
@@ -405,10 +413,7 @@ footer > p > a:hover {
 @keyframes moveInUp {
   0% {
     opacity: 0;
-    transform: translateY(200px);
-  }
-  40% {
-    opacity: 0;
+    transform: translateY(30px);
   }
   80% {
     transform: translateY(-20px);
