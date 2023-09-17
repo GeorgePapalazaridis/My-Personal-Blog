@@ -1,9 +1,10 @@
 html {
-  font-size: 16px;
+  font-size: 100%;
+  box-sizing: border-box;
 }
 
-* {
-  box-sizing: border-box;
+*, *::before, *::after {
+  box-sizing:inherit;
   margin: 0;
   padding: 0;
 }
@@ -32,7 +33,7 @@ html {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", "Arial", sans-serif;
   font-weight: 400;
   font-size: 1rem;
   margin: 0 auto;
@@ -79,7 +80,7 @@ nav > ul > li {
 nav > ul > li > a {
   text-decoration: none;
   color: black;
-  font-family: Audiowide;
+  font-family: "Audiowide";
   font-size: 1.1rem;
   letter-spacing: 0.2rem;
 }
@@ -100,7 +101,7 @@ nav > ul > li > a {
 }
 
 .heading {
-  font-family: "Trirong", serif;
+  font-family: "Trirong", "Times New Roman", sans-serif;
   backface-visibility: hidden;
 }
 
@@ -236,9 +237,14 @@ a {
 }
 
 .project:hover .code {
-  color: var(--btn-color);
+  color: var(--textColor-4);
 }
 
+.project:hover {
+  border: 5px solid var(--textColor-4);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+}
 
 
 .fas {
